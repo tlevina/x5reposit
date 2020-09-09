@@ -3,6 +3,7 @@ package ru;
 
 import java.util.Scanner;
 
+
 public class HomeTask_II {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

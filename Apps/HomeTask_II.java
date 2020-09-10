@@ -3,7 +3,6 @@ package ru;
 
 import java.util.Scanner;
 
-
 public class HomeTask_II {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -68,7 +67,7 @@ public class HomeTask_II {
             num /= 10;
         } while (num != 0);
 
-        System.out.printf("CСумма цифр: %d \n", sum);
+        System.out.printf("Cумма цифр: %d \n", sum);
         in.close();
     }
 
@@ -181,26 +180,26 @@ public class HomeTask_II {
 
     //восьмое задание
     public static void eight() {
-        int[] ArrayList = {1, -10, 5, 6, 45, 23, -45, -34, 0, 32, 56, -1, 2, -2};
-        int sumPositive = 0, sumNegative = 0, countNegative = 0, max = ArrayList[0], sumEvenNegative = 0, countPositive = 0;
+        int[] Array = {1, -10, 5, 6, 45, 23, -45, -34, 0, 32, 56, -1, 2, -2};
+        int sumPositive = 0, sumNegative = 0, countNegative = 0, max = Array[0], sumEvenNegative = 0, countPositive = 0;
         double avgNegative = 0;
-        for (int i = 0; i < ArrayList.length; i++) {
+        for (int i = 0; i < Array.length; i++) {
             //максимальное значение
-            if (i > 0 & max < ArrayList[i]) {
-                max = ArrayList[i];
+            if (i > 0 & max < Array[i]) {
+                max = Array[i];
 
             }
             //остальное
-            if (ArrayList[i] > 0) {
-                sumPositive += ArrayList[i];
+            if (Array[i] > 0) {
+                sumPositive += Array[i];
                 countPositive++;
             } else {
-                sumNegative += ArrayList[i];
-                if (ArrayList[i] != 0) {
+                sumNegative += Array[i];
+                if (Array[i] != 0) {
                     countNegative++;
                 }
-                if (ArrayList[i] % 2 == 0) {
-                    sumEvenNegative += ArrayList[i];
+                if (Array[i] % 2 == 0) {
+                    sumEvenNegative += Array[i];
                 }
             }
         }
@@ -217,33 +216,33 @@ public class HomeTask_II {
     //девятое задание
     public static void nine() {
         int k;
-        int[] ArrayList = {15, 10, 51, -6, -5, 3, -10, -34, 0, 32, 56, -12, 24, -52};
-        for (int i = 1; i < ArrayList.length / 2 + 1; i++) {
-            k = ArrayList[i - 1];
-            ArrayList[i - 1] = ArrayList[ArrayList.length - i];
-            ArrayList[ArrayList.length - i] = k;
+        int[] Array = {15, 10, 51, -6, -5, 3, -10, -34, 0, 32, 56, -12, 24, -52};
+        for (int i = 1; i < Array.length / 2 + 1; i++) {
+            k = Array[i - 1];
+            Array[i - 1] = Array[Array.length - i];
+            Array[Array.length - i] = k;
         }
-        for (int i = 0; i < ArrayList.length; i++) {
-            System.out.print(ArrayList[i] + " ");
+        for (int i = 0; i < Array.length; i++) {
+            System.out.print(Array[i] + " ");
         }
     }
 
     //десятое задание
     public static void ten() {
         int k = 0;
-        int[] ArrayList = {15, 10, 0, -6, -5, 3, 0, -34, 0, 32, 56, 0, 24, -52};
-        for (int i = 0; i < ArrayList.length - 1 - k; i++) {
-            if (ArrayList[i] == 0) {
-                for (int j = i; j < ArrayList.length - 1; j++) {
-                    ArrayList[j] = ArrayList[j + 1];
+        int[] Array = {15, 10, 0, -6, -5, 3, 0, -34, 0, 32, 56, 0, 24, -52};
+        for (int i = 0; i < Array.length - 1 - k; i++) {
+            if (Array[i] == 0) {
+                for (int j = i; j < Array.length - 1; j++) {
+                    Array[j] = Array[j + 1];
                 }
-                ArrayList[ArrayList.length - 1 - k] = 0;
+                Array[Array.length - 1 - k] = 0;
                 k++;
             }
 
         }
-        for (int i = 0; i < ArrayList.length; i++) {
-            System.out.print(ArrayList[i] + ", ");
+        for (int i = 0; i < Array.length; i++) {
+            System.out.print(Array[i] + ", ");
         }
     }
 }

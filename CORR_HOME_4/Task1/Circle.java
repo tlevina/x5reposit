@@ -17,6 +17,6 @@ public class Circle implements Shape{
 
     @Override
     public double square() {
-        return 3.141592 * r * r;
+        return Math.PI * r * r;
     }
 }
